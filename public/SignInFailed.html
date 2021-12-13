@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Orbitron:wght@500&family=Sacramento&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <title>FAILED</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        main {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            height: 500px;
+            width: 500px;
+            background-color: rgba(240,233,210,0.3);
+            border-radius: 10% 40% / 50% 20%;
+            transition: all 0.5s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+
+        h1 {
+            padding: 0.5rem 1.5rem;
+            background-color: rgba(245,211,133,0.4);
+            box-shadow: 0 0.5em 0.5em -0.4em #f5d385;
+        } 
+
+        h2 {
+            width: 70%;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        button {
+            background: none;
+            border: 2px solid white;
+            color: white;
+            padding: 0.2rem 2rem;
+            transition: all 0.25s;
+            font-size: 20px;
+            background-color: rgba(245,211,133,0.2);
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        button:hover {
+            border-color: #f5d385;
+            box-shadow: 0 0.5em 0.5em -0.4em #f5d385;
+            transform: translateY(-0.25em);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>SIGN IN FAILED!</h1>
+        <h2>Return to sign up page and decide how you want to play the game !</h2>
+        <button>RETURN</button>
+    </main>
+</body>
+</html>

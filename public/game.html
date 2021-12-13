@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../Assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="game1.css">
+    <title>Falling Rocks</title>
+</head>
+<body>
+    <div class="dialogue">
+        <div class="dialogue__content">
+            <h1>Falling Rocks</h1>
+            <ul>
+                <li>Use the <span class="key key--arrow"> &larr; </span> and <span class="key key--arrow"> &rarr; </span> keys to move.</li>
+                <li>Use <span class="key">spacebar</span> to fire lasers.</li>
+            </ul>
+            <button class="start-button">Start</button>
+        </div>
+    </div>
+    <ul class="hud hud--hidden">
+        <ul style="padding-left: 0px;">
+            <li class="hud__score">Score: <span>0</span></li>
+            <li class="hud__score highscore"><br>Highscore: <span>0</span></li>
+        </ul>
+        
+        <button class="menu-button">Menu</button>  
+        <div class="popup visible">
+            <!-- <div class="menu">Return</div>
+            <div class="menu">Quit</div>
+            <div class="menu">Logout</div> -->
+
+            <button class="menu options" id="passHS"><a href="game.html">QUIT</a></button>
+            <button class="menu options"><a href="index.html">Logout</a></button>
+        </div>      
+
+    </ul>
+    <script src="./game1.js"></script>
+</body>
+</html>

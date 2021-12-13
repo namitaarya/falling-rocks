@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Orbitron:wght@500&family=Sacramento&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <title>Sign Up</title>
+    <style>
+
+        #title {
+            font-size: 2rem;
+            padding: 1.5rem 4rem;
+            margin-bottom: 30px;
+        }
+
+        #welcome {
+            margin-bottom: 20px;
+        }
+
+        .input {
+            padding: 5px;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+   
+    <main>
+        <section>
+        <div id="title">SIGN UP</div>
+        <div id="welcome">Welcome! Please enter your credidentials</div>
+        <form action="/signup" method="POST">
+            <div id="form-contents">
+                <label for="name">NAME</label>
+                    <div class="input">
+                        <input type="text" id="name" name="name" placeholder="name">
+                    </div>
+                <label for="emailid">EMAIL</label>
+                    <div class="input">
+                        <input type="email" id="email" name="email" placeholder="email">
+                    </div>
+                <label for="password">PASSWORD</label>
+                    <div class="input">
+                        <input type="text" id="password" name="password" placeholder="password">
+                    </div>
+                <button type="submit">SIGN UP</button>
+            </div>
+        </form>
+        </section>
+    </main>
+    
+</body>
+</html>

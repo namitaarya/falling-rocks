@@ -1,0 +1,106 @@
+body {
+    background-color: black;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+}
+
+main {
+    position: fixed;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 600px;
+    background-color: rgba(240,233,210,0.2);
+    border-radius: 50% 20% / 10% 40%;
+    transition: all 0.5s;
+}
+
+main:hover {
+    height: 620px;
+    width: 700px;
+    background-color: rgba(240,233,210,0.3);
+    border-radius: 10% 40% / 50% 20%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#title {
+    font-size: 2rem;
+    padding: 1.5rem 4rem;
+    margin-bottom: 50px;
+}
+
+main:hover #title {
+    background-color: rgba(245,211,133,0.4);
+    box-shadow: 0 0.5em 0.5em -0.4em #f5d385;
+}
+
+form {
+    width: 50%;
+    text-align: center;
+}
+
+.input {
+    padding: 10px;
+    align-self: center;
+}
+
+.form-contents {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+input{
+    padding: 5px;
+    margin: 10px;
+    font-size: 18px;
+    width: 90%;
+    align-self: center;
+}
+
+input:hover {
+    border-color: #f5d385;
+    box-shadow: 0 0.5em 0.5em -0.4em #f5d385;
+}
+
+label {
+    text-align: center;
+}
+
+#welcome {
+    margin-bottom: 30px;
+}
+
+button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 0.2rem 2rem;
+    transition: all 0.25s;
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 10px;
+}
+
+main:hover button {
+    background-color: rgba(245,211,133,0.2);
+}
+
+button:hover {
+    border-color: #f5d385;
+    box-shadow: 0 0.5em 0.5em -0.4em #f5d385;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
