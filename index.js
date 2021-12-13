@@ -4,6 +4,7 @@ var bodyParser = require("body-parser");
 var Mongoose = require("mongoose");
 const { application, response } = require("express");
 const mongoPass = process.env.mongoPass;
+const port = process.env.PORT || 3000;
 
 const app = express();
 let shouldPlay = false;
@@ -116,6 +117,6 @@ app
   .get("/", function (req, res) {
     res.redirect("index.html");
   })
-  .listen(3000);
+  .listen(port);
 
 console.log("LISTENING TO PORT");
