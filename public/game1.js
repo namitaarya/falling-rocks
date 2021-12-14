@@ -21,6 +21,17 @@ const startBtn = document.querySelector(".start-button");
 const hud = document.querySelector('.hud');
 const scoreNode = document.querySelector('.hud__score span');
 const highscoreNode = document.querySelector('.highscore span');
+var background = new Image();
+background.src = "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/146464531/original/8c5628fb166d24655c9c1b87ef1d403c2a7f8f24/create-vector-2d-game-background-for-your-game.png";
+
+var shooter = new Image();
+shooter.src = "https://i.ibb.co/w0wJWjZ/Whats-App-Image-2021-12-06-at-7-46-15-PM-removebg-preview-1.png";
+
+var rock = new Image();
+rock.src = "https://www.freepnglogos.com/uploads/rock-png/home-natural-stone-company-greenville-big-rock-natural-29.png";
+
+var laser = new Image();
+laser.src = "https://www.pinclipart.com/picdir/big/270-2701567_fireball-clipart-8-bit-png-download.png";
 
 // maintaining highscore of the user
 
@@ -73,7 +84,7 @@ function calcScore(x) {
 function Ship(options) {
   this.radius = 15;
   this.x = options.x || stage.width * .5 - this.radius - .5;
-  this.y = options.y || stage.height - this.radius - 30;
+  this.y = options.y || stage.height - this.radius - 60;
   this.width = this.radius * 2;
   this.height = this.width;
   this.color = options.color || 'red';
@@ -90,7 +101,7 @@ function Ship(options) {
 // console.log(Ship.prototype)
 Ship.prototype.update = function (x) {
   this.x = x;
-  this.y = stage.height - this.radius - 30;
+  this.y = stage.height - this.radius- 60;
 };
 
 
@@ -102,11 +113,7 @@ Ship.prototype.draw = function () {
     ctx.fillRect(this.x, this.y, this.width, this.width);
   }
 
-  ctx.fillStyle = this.color;
-  ctx.fillRect(this.x + this.radius - 5, this.y, 10, this.radius);
-  ctx.fillRect(this.x, this.y + this.radius, this.width, 10);
-  ctx.fillRect(this.x, this.y + this.radius + 10, 10, 5);
-  ctx.fillRect(this.x + this.width - 10, this.y + this.radius + 10, 10, 5);
+  ctx.drawImage(shooter, this.x, this.y, this.width * 3, this.height * 3);
   ctx.restore();
 };
 
@@ -144,11 +151,10 @@ Laser.prototype.update = function (y) {
 
 Laser.prototype.draw = function () {
   ctx.save();
-  ctx.fillStyle = this.color;
+  ctx.drawImage(laser, this.x, this.y + 5, this.width, this.height);
   ctx.beginPath();
   ctx.rect(this.x, this.y, this.width, this.height);
   ctx.closePath();
-  ctx.fill();
   ctx.restore();
 };
 
@@ -175,11 +181,10 @@ Enemy.prototype.draw = function () {
   }
 
   ctx.save();
-  ctx.fillStyle = this.color;
+  ctx.drawImage(rock, this.x, this.y, this.width, this.height);
   ctx.beginPath();
   ctx.arc(this.x + this.radius, this.y + this.radius, this.radius, 0, Math.PI * 2);
   ctx.closePath();
-  ctx.fill();
   ctx.restore();
 };
 
@@ -311,9 +316,8 @@ function render(delta) {
 
 
     ctx.save();
-    ctx.fillStyle = '#222222';
-    ctx.fillRect(0, 0, stage.width, stage.height);
-    ctx.restore(); // ship movement
+    ctx.drawImage(background, 0, 0, stage.width, stage.height);
+    ctx.restore();
 
     if (ship.left) xPos = ship.x -= ship.speed;else if (ship.right) xPos = ship.x += ship.speed; // stage boundaries
 
@@ -361,7 +365,7 @@ async function startGame(e) {
   speedMultiplier = 1;
   enemySeedFrameInterval = 100;
   ship.x = stage.width * 0.5 - ship.radius - 0.5;
-  ship.y = stage.height - ship.radius - 30;
+  ship.y = stage.height - ship.radius - 60;
   enemies = [];
   gameStarted = true;
 }

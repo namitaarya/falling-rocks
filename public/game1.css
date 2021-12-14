@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Orbitron:wght@500&family=Sacramento&family=Zen+Kurenaido&display=swap');
+
 
 button, .key {
     border: 1px solid currentColor;
@@ -8,7 +11,7 @@ button, .key {
   }
   body {
     color: #ffffff;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Orbitron', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0ex;
@@ -33,7 +36,7 @@ button, .key {
     appearance: none;
     background-color: #ffffff;
     cursor: pointer;
-    font-family: inherit;
+    font-family: 'Orbitron', sans-serif;
     font-size: 1rem;
     outline: none;
     padding: 0.7em 0.85em 0.6em 1em;
@@ -99,6 +102,7 @@ button, .key {
   .hud__score {
     margin: 0;
     list-style-type: none;
+    color: black;
   }
    
   .menu-button {
@@ -129,7 +133,7 @@ button, .key {
     width: 100%;
     text-align: center;
     color: white;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Orbitron', sans-serif;
     font-size: 1.8rem;
     padding: 0.6rem 0;
   }
