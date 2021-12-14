@@ -2,8 +2,14 @@
 
 body {
     background-color: black;
-    color: white;
-    font-family: 'Orbitron', sans-serif;
+    color: black;
+    font-family: 'Orbitron', sans-serif;  
+
+    background-image: url('https://i.ibb.co/t3SC0GY/imageedit-1-3338353059.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 main {
@@ -93,6 +99,7 @@ button:hover {
     box-shadow: 0 0.5em 0.5em -0.4em black;
     z-index: 1;
     border-radius: 10% 10% 40% 40%;
+    color: white;
 }
 
 .drop:hover .dropdown-content {

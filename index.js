@@ -13,6 +13,7 @@ app.use(cookieParser());
 
 Mongoose.connect(`mongodb+srv://namita123:${mongoPass}@cluster0.b6ahf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, 
 {
+  //${mongoPass}
   useNewUrlParser: true,
 });
 

@@ -2,6 +2,11 @@ body {
     background-color: black;
     font-family: 'Orbitron', sans-serif;
     color: white;
+    background-image: url('https://i.ibb.co/t3SC0GY/imageedit-1-3338353059.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 main {
