@@ -136,10 +136,10 @@ Ship.prototype.onKeyUp = function (e) {
 };
 
 function Laser(options) {
-  this.x = options.x - .5;
+  this.x = options.x + .1;
   this.y = options.y || stage.height - 50;
-  this.width = 6;
-  this.height = 20;
+  this.width = 15;
+  this.height = 15;
   this.speed = 15;
   this.color = options.color || 'white';
   this.active = true;
@@ -208,7 +208,7 @@ async function handleLaserCollision() {
         enemy.active = false;
         laser.active = false; // increase enemy speed and frequency of enemy spawns
 
-        speedMultiplier += .025;
+        speedMultiplier += .15;
 
         if (enemySeedFrameInterval > 20) {
           enemySeedFrameInterval -= 2;
@@ -322,7 +322,7 @@ function render(delta) {
     if (ship.left) xPos = ship.x -= ship.speed;else if (ship.right) xPos = ship.x += ship.speed; // stage boundaries
 
     if (gameStarted) {
-      if (xPos < 0) xPos = 0;else if (xPos > stage.width - ship.width) xPos = stage.width - ship.width;
+      if (xPos < 0) xPos = 0;else if (xPos > stage.width - ship.width) xPos = stage.width - ship.width -20;
     } // create lasers, if shooting
 
 
